@@ -11,6 +11,7 @@ module Rspec
         def initialize()
           @p = ::Axlsx::Package.new
           @workbook = @p.workbook
+          @report_dir = ENV["XLSX_REPORT"] || "spec/xlsx"
 
           @example_num = 0
 
@@ -25,8 +26,8 @@ module Rspec
           convert_to_sheet do |worksheet|
           end
           @p.use_shared_strings = true
-          FileUtils.mkdir_p("spec/xlsx")
-          @p.serialize("spec/xlsx/report.xlsx")
+          FileUtils.mkdir_p(@report_dir)
+          @p.serialize("#{@report_dir}/report.xlsx")
         end
 
         private
