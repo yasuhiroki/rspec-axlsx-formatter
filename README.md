@@ -1,6 +1,6 @@
 # Rspec::Axlsx::Formatter
 
-TODO: Write a gem description
+"rspec-axlsx-formatter" is a [RSpec](http://github.com/rspec) custom formatter that uses [Axlsx](https://github.com/randym/axlsx) and generate xlsx file as spec result.
 
 ## Installation
 
@@ -18,7 +18,23 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Require the follow in your Rakefile.
+
+```
+require 'rspec/axlsx/rake/rspec'
+```
+
+And, add `axlsx:setup:rspec` at rake command.
+
+
+Example)
+
+```
+rake axlsx:setup:rspec spec
+```
+
+This usage is similar to ci_report_rspec.
+(In actuality, I use ci_report_rspec as reference.)
 
 ## Contributing
 
@@ -27,3 +43,7 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+## Liscense
+
+MIT
