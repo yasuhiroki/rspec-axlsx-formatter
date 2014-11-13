@@ -11,7 +11,7 @@ namespace :axlsx do
     def setup_spec_opts(*extra_options)
       base_opts = [
         "--require", "#{File.dirname(__FILE__)}/rspec_loader.rb",
-        "--format", "Rspec::Axlsx::FormatterRSpec3"
+        "--format", "Rspec::AxlsxFormatter"
       ]
 
       spec_opts = (base_opts + extra_options).join(" ")

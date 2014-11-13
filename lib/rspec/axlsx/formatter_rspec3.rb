@@ -2,8 +2,6 @@ require "rspec/core"
 require "rspec/core/formatters/base_formatter"
 require "rspec/axlsx/formatter/core"
 
-require_relative "formatter/core"
-
 module Rspec
   module Axlsx
     #class Formatter < ::RSpec::Core::Formatters::BaseFormatter

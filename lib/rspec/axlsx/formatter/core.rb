@@ -32,7 +32,9 @@ module Rspec
         private
 
         def success?(example)
-          example.execution_result.status == :passed
+          result = example.execution_result
+          return result[:status] == "passed" if result.kind_of?(Hash) # RSpec2
+          return result.status == :passed
         end
 
         def has_status?(example)
